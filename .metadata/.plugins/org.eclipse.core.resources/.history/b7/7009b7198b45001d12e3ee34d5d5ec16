@@ -1,0 +1,35 @@
+package br.com.ana.operacoescrud.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import br.com.ana.operacoescrud.domain.Contato;
+import br.com.ana.operacoescrud.exception.ContatoInvalidoException;
+import br.com.ana.operacoescrud.repository.ContatoRepository;
+
+@Service
+public class ContatoService {
+	
+	@Autowired
+	private ContatoRepository contatoRepository;
+	
+	@Autowired
+	private Contato contato;
+	
+	public Contato save(Contato contato) throws ContatoInvalidoException {
+		if((contato.getNome().equals(null)) && (contato.getEmailPrincipal().equals(null))) {
+				
+			throw new ContatoInvalidoException(
+					String.format("Contato inválido! Fornecer nome e e-mail, por favor!"));
+		}
+				
+		return contatoRepository.save(contato);
+	}
+	
+	public Contato saveAndFlush(Contato contato) {
+		
+	}
+	
+	
+
+}

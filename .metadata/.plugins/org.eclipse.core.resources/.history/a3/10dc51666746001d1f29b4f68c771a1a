@@ -1,0 +1,4 @@
+spring.datasource.url=jdbc:mysql://localhost:3306/operacoescrud?
+jdbc:mysql://localhost/operacoescrud?createDatabaseIfNotExist=true
+spring.datasource.username=Ana
+spring.datasource.password=dsa2020

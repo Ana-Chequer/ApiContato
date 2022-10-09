@@ -1,0 +1,5 @@
+package br.com.ana.operacoescrud;
+
+public class Exception {
+
+}
