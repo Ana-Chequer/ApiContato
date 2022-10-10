@@ -1,0 +1,30 @@
+package service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import Exception.ContatoInvalidoException;
+import domain.Contato;
+import repository.ContatoRepository;
+
+@Service
+public class ContatoService {
+	
+	@Autowired
+	private ContatoRepository contatoRepository;
+	
+	@Autowired
+	private Contato contato;
+	
+	public Contato save(Contato contato) throws ContatoInvalidoException {
+		if((contato.getNome().equals(null)) && (contato.getEmailPrincipal().equals(null))) {
+				
+			throw new ContatoInvalidoException();
+		}
+				
+		return contatoRepository.save(contato);
+	}
+	
+	
+
+}

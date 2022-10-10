@@ -1,0 +1,29 @@
+package service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import domain.Contato;
+import repository.ContatoRepository;
+
+@Service
+public class ContatoService {
+	
+	@Autowired
+	private ContatoRepository contatoRepository;
+	
+	@Autowired
+	private Contato contato;
+	
+	public Contato save(Contato contato) throws Exception {
+		if((contato.getNome().equals(null)) && (contato.getEmailPrincipal().equals(null))) {
+				
+			throw new Exception();
+		}
+				
+		return contatoRepository.save(contato);
+	}
+	
+	
+
+}

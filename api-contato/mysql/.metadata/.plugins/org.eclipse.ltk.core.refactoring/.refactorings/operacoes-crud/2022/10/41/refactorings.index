@@ -1,0 +1,16 @@
+1664978358554	Rename package 'br.com.ana.operacoescrud.domain'
+1664984509594	Rename package 'restController'
+1664984834927	Rename package 'ContatoController'
+1665000021556	Delete element
+1665007863134	Rename package 'Controller'
+1665007943624	Rename package 'br.com.ana.controller'
+1665007994649	Rename package 'domain'
+1665008030798	Rename package 'Exception'
+1665008050049	Copy package
+1665008069351	Delete element
+1665008102695	Rename package 'repository'
+1665008119835	Rename package 'service'
+1665068555042	Copy compilation unit
+1665076835279	Delete element
+1665077693014	Copy compilation unit
+1665079143077	Rename type 'ContatoNaoEncontrado'
